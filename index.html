@@ -5,6 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para mi reina</title>
 <style>
+    /* Estilo base de la imagen */
+    .img-brillo {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo al pasar el cursor por encima */
+    .img-brillo:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Color y opacidad del brillo */
+  transition: opacity 0.3s ease; /* Transición suave del brillo */
+}
+
+/* Estilo de la imagen */
+    .img-brillo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
     body {
         font-family: Arial, sans-serif;
         text-align: center;
