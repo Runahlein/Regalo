@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página de Aniversario</title>
+<title>Contenido Especial de Aniversario</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -24,6 +24,9 @@
     h1 {
         color: #e91e63;
     }
+    .content {
+        display: none;
+    }
 </style>
 </head>
 <body>
@@ -35,17 +38,23 @@
     <p id="message"></p>
 </div>
 
+<div class="content">
+    <h2>Contenido Especial</h2>
+    <p>Aquí encontrarás fotos, videos, imágenes de corazones y frases bonitas para celebrar nuestro aniversario.</p>
+    <!-- Puedes añadir aquí las fotos, videos, imágenes de corazones y frases bonitas -->
+</div>
+
 <script>
 function checkPassword() {
     var password = document.getElementById("passwordInput").value;
     var message = document.getElementById("message");
+    var content = document.getElementsByClassName("content")[0];
     
     if (password === "ukiyo") {
-        message.innerHTML = "¡Bienvenido! ¡Hola, Paula!";
-        // Aquí puedes redirigir a la página con el contenido
+        message.innerHTML = "¡Bienvenida Paula!";
+        content.style.display = "block";
     } else {
-        message.innerHTML = "Contraseña incorrecta. El mapache no lo acepta.";
-        // Aquí puedes hacer que aparezca un mapache con los ojos cerrados
+        message.innerHTML = "Contraseña incorrecta. Tu mapache no estaria orgulloso.";
     }
 }
 </script>
