@@ -75,6 +75,22 @@ function checkPassword() {
         message.innerHTML = "Contraseña incorrecta. Tu mapache no estaria orgulloso.";
     }
 }
+function animateContent() {
+    var photos = document.querySelectorAll(".photo-slide");
+    var videos = document.querySelectorAll(".video-slide");
+    
+    photos.forEach((photo, index) => {
+        setTimeout(() => {
+            photo.style.opacity = 1;
+        }, index * 500);
+    });
+    
+    videos.forEach((video, index) => {
+        setTimeout(() => {
+            video.style.opacity = 1;
+        }, index * 500);
+    });
+}
 </script>
 </body>
 </html>
