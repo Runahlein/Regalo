@@ -12,6 +12,10 @@
 }
 
 /* Efecto de brillo al pasar el cursor por encima */
+    .img-brillo:hover img {
+  transform: scale(1.1); /* Zoom al 110% */
+}
+
     .img-brillo:hover::before {
   content: "";
   position: absolute;
@@ -19,10 +23,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* Color y opacidad del brillo */
+  background: rgb(255, 0, 255); /* Color y opacidad del brillo */
   transition: opacity 0.3s ease; /* Transición suave del brillo */
 }
-
 /* Estilo de la imagen */
     .img-brillo img {
   display: block;
