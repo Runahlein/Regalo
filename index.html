@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aniversario con Amor</title>
+<title>Página de Aniversario</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -24,36 +24,30 @@
     h1 {
         color: #e91e63;
     }
-    .hearts {
-        font-size: 50px;
-        color: #e91e63;
-    }
-    .media {
-        margin-top: 20px;
-    }
 </style>
 </head>
 <body>
 <div class="container">
     <h1>Feliz Aniversario</h1>
-    <p>¡Felicidades en nuestro día especial! Este sitio web es un pequeño regalo lleno de amor para ti.</p>
-    <p>Recuerda siempre lo mucho que te quiero y lo especial que eres para mí.</p>
-    <p>¡Que nuestro amor siga creciendo cada día!</p>
-    <div class="hearts">
-        &hearts; &hearts; &hearts;
-    </div>
-    
-    <div class="media">
-        <h2>Fotos</h2>
-        <img src="ruta_de_la_imagen1.jpg" alt="Foto 1" style="max-width: 100%;">
-        <img src="ruta_de_la_imagen2.jpg" alt="Foto 2" style="max-width: 100%;">
-    </div>
-    
-    <div class="media">
-        <h2>Videos</h2>
-        <iframe width="560" height="315" src="enlace_del_video1" title="Video 1" frameborder="0" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="enlace_del_video2" title="Video 2" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <p>¡Felicidades en nuestro día especial! Ingresa la contraseña para ver el contenido.</p>
+    <input type="password" id="passwordInput" placeholder="Contraseña">
+    <button onclick="checkPassword()">Ingresar</button>
+    <p id="message"></p>
 </div>
+
+<script>
+function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    var message = document.getElementById("message");
+    
+    if (password === "ukiyo") {
+        message.innerHTML = "¡Bienvenido! ¡Hola, mapache!";
+        // Aquí puedes redirigir a la página con el contenido
+    } else {
+        message.innerHTML = "Contraseña incorrecta. El mapache cierra los ojos.";
+        // Aquí puedes hacer que aparezca un mapache con los ojos cerrados
+    }
+}
+</script>
 </body>
 </html>
